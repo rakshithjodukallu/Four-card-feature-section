@@ -1,0 +1,140 @@
+*,::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --fontfamily: 'Poppins', sans-serif;
+    /* primary color */
+    --red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --orange: hsl(34, 97%, 64%);
+    --blue: hsl(212, 86%, 64%);
+
+    /* secondary color */
+    --VeryDarkBlue: hsl(234, 12%, 34%);
+    --GrayishBlue: hsl(229, 6%, 66%);
+    --VeryLightGray: hsl(0, 0%, 98%);
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    font-family: var(--fontfamily);
+    background-color: var(--VeryLightGray);
+    color: var(--GrayishBlue);
+}
+
+.main{
+    text-align: center;
+}
+
+.main h1{
+    font-weight: 200;
+}
+
+.main h2{
+    color: black;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.main p{
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+
+.boxouter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 60px;
+    gap: 25px;
+}
+
+.box-container{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.boxitem{
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 30px;
+    text-align: right;
+    box-shadow: 0 1rem 2rem .5rem #dedede;
+}
+
+.boxitem h5, h6{
+    text-align: left;
+}
+
+.downicon{
+    padding-top: 30px;
+}
+
+.boxitem h5{
+    font-size: 20px;
+    color: var(--VeryDarkBlue);
+    margin-bottom: 10px;
+}
+
+.boxitem:nth-child(1){
+    border-top: 4px solid var(--Cyan);
+    align-self: center;
+
+}
+
+.box-container .boxitem:nth-child(1){
+    border-top: 4px solid var(--red);
+}
+
+.box-container .boxitem:nth-child(2){
+    border-top: 4px solid var(--orange);
+}
+
+.boxitem:nth-child(3){
+    border-top: 4px solid var(--blue);
+    align-self: center;
+}
+
+/* -------------------------------------- */
+
+@media only screen and (max-width: 768px){
+    .boxouter{
+        grid-template-columns: 1fr;
+    }
+    .main h2 {
+        color: black;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 425px){
+    body{
+        padding: 30px 0;
+        font-size: 13px;
+    }
+    .main h1 {
+        font-size: 20px;
+    }
+    .main h2 {
+        color: black;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .boxouter {
+        margin-top: 30px;
+
+    }
+    .container{
+        padding: 0 30px;
+    }
+}
